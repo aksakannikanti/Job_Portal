@@ -54,7 +54,7 @@ function JobDetails() {
     const fetchDetails = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/jobs"
+          "https://job-portal-backend-b2hp.onrender.com/api/jobs"
         );
 
         const selectedJob = response.data.find(
@@ -99,7 +99,7 @@ function JobDetails() {
 
       try {
         const applicationsResponse = await axios.get(
-          "http://localhost:5000/api/applications/my-applications",
+          "https://job-portal-backend-b2hp.onrender.com/api/applications/my-applications",
           {
             headers: {
               Authorization: `Bearer ${currentToken}`,
@@ -214,7 +214,7 @@ function JobDetails() {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/applications/${jobId}`,
+        `https://job-portal-backend-b2hp.onrender.com/api/applications/${jobId}`,
         formData,
         {
           headers: {

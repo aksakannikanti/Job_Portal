@@ -26,7 +26,7 @@ function Applicants() {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/applications/job/${jobId}`,
+          `https://job-portal-backend-b2hp.onrender.com/api/applications/job/${jobId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -90,7 +90,7 @@ function Applicants() {
 
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/applications/${applicationId}/status`,
+        `https://job-portal-backend-b2hp.onrender.com/api/applications/${applicationId}/status`,
         { status },
         {
           headers: {
@@ -134,7 +134,7 @@ function Applicants() {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/applications/${applicationId}/resume`,
+        `https://job-portal-backend-b2hp.onrender.com/api/applications/${applicationId}/resume`,
         {
           headers: {
             Authorization: `Bearer ${token}`

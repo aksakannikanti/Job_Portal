@@ -13,7 +13,7 @@ function Jobs() {
     const fetchJobs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/jobs"
+          "https://job-portal-backend-b2hp.onrender.com/api/jobs"
         );
 
         setJobs(response.data);

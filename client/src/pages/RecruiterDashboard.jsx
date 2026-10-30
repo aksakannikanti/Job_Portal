@@ -55,7 +55,7 @@ function RecruiterDashboard() {
   const fetchMyJobs = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/jobs/my-jobs",
+        "https://job-portal-backend-b2hp.onrender.com/api/jobs/my-jobs",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -120,7 +120,7 @@ function RecruiterDashboard() {
       };
 
       await axios.post(
-        "http://localhost:5000/api/jobs",
+        "https://job-portal-backend-b2hp.onrender.com/api/jobs",
         jobData,
         {
           headers: {
@@ -150,7 +150,7 @@ function RecruiterDashboard() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/jobs/${selectedJob._id}`,
+        `https://job-portal-backend-b2hp.onrender.com/api/jobs/${selectedJob._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

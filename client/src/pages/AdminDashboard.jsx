@@ -39,9 +39,9 @@ function AdminDashboard() {
 
         const [statsResponse, usersResponse, jobsResponse] =
           await Promise.all([
-            axios.get("http://localhost:5000/api/admin/stats", config),
-            axios.get("http://localhost:5000/api/admin/users", config),
-            axios.get("http://localhost:5000/api/admin/jobs", config),
+            axios.get("https://job-portal-backend-b2hp.onrender.com/api/admin/stats", config),
+            axios.get("https://job-portal-backend-b2hp.onrender.com/api/admin/users", config),
+            axios.get("https://job-portal-backend-b2hp.onrender.com/api/admin/jobs", config),
           ]);
 
         setStats(statsResponse.data);
@@ -81,7 +81,7 @@ function AdminDashboard() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/jobs/${jobId}`,
+        `https://job-portal-backend-b2hp.onrender.com/api/admin/jobs/${jobId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
